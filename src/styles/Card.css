@@ -1,0 +1,22 @@
+job-card {
+    border-radius: 12px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    height: 100%;
+    position: relative; /* Add position relative for absolute positioning */
+  }
+  
+  .view-more {
+    position: absolute;
+    bottom: 0.5rem;
+    left: 20.7rem;
+    background: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+    border-radius: 5px;
+    padding: 0.3rem 0.5rem;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); /* Add shadow effect */
+    transition: background 0.3s ease; /* Add transition effect */
+  }
+  
+  .view-more:hover {
+    background: rgba(255, 255, 255, 1); /* Fully opaque white background on hover */
+  }
+  

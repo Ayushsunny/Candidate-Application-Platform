@@ -1,10 +1,12 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchJobs } from './/actions/jobsAction';
+import { fetchJobs } from './actions/jobsAction';
+import JobRoles from './components/jobRoles';
+import './App.css'; 
 
 function App() {
   const dispatch = useDispatch();
-  const {jobs} = useSelector(state => state.jobs);
+  const { loading, jobs, error } = useSelector(state => state.jobs);
 
   useEffect(() => {
     dispatch(fetchJobs());
@@ -14,7 +16,18 @@ function App() {
 
   return (
     <div>
-      <h1>Job List Page</h1>
+      <div className="app-header">
+        <h1>Candidate Application Platform</h1>
+      </div>
+      <div className="job-list-container">
+        {loading ? (
+          <p>Loading...</p>
+        ) : error ? (
+          <p>Error: {error}</p>
+        ) : (
+          <JobRoles jobs={jobs} /> // Render the JobRole component and pass the jobs array as a prop
+        )}
+      </div>
     </div>
   );
 }
