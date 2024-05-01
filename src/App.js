@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchJobs } from './actions/jobsAction';
+import Filters from './components/Filters';
 import JobRoles from './components/jobRoles';
 import './App.css'; 
 
@@ -19,13 +20,14 @@ function App() {
       <div className="app-header">
         <h1>Candidate Application Platform</h1>
       </div>
+      <Filters />
       <div className="job-list-container">
         {loading ? (
           <p>Loading...</p>
         ) : error ? (
           <p>Error: {error}</p>
         ) : (
-          <JobRoles jobs={jobs} /> // Render the JobRole component and pass the jobs array as a prop
+          <JobRoles jobs={jobs} /> 
         )}
       </div>
     </div>
