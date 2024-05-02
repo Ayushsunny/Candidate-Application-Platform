@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Card as MuiCard, CardContent, Typography, Button } from '@mui/material';
-import '../styles/Card.css'; // Import the CSS file for styling
+import '../styles/Card.css'; 
+import '../App.css';
 
 const Card = ({ job }) => {
   const [expanded, setExpanded] = useState(false);

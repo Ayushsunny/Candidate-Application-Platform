@@ -1,14 +1,32 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Card from './Card';
 
-const JobRoles = ({ jobs }) => {
+const JobRoles = ({ jobs, loadMore }) => {
+  const [isLoading] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const windowHeight = window.innerHeight;
+      const documentHeight = document.documentElement.scrollHeight;
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+      if (windowHeight + scrollTop >= documentHeight - 20) {
+        loadMore();
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [jobs, loadMore]); // Include jobs and loadMore in the dependency array
+
   return (
     <div className="job-list">
-      <div className="job-grid">
-        {jobs.map(job => (
-          <Card key={job.jdUid} job={job} />
-        ))}
-      </div>
+      {jobs.map(job => (
+        <Card key={job.id} job={job} />
+      ))}
+      {isLoading && <p>Loading more jobs...</p>}
     </div>
   );
 };
