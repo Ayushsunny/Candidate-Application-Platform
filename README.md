@@ -2,6 +2,8 @@
 
 This project is a candidate application platform that allows users to view job listings, filter jobs based on various criteria, and implement infinite scroll for a seamless browsing experience. The platform provides a user-friendly interface for viewing and applying to jobs.
 
+![](image.png)
+
 ## Project Setup
 
 1. **Clone Repository**: Clone the repository to your local machine using `git clone`.
@@ -37,7 +39,5 @@ Your assignment will be evaluated based on the following criteria:
 - [x] Responsiveness: Does the platform work well on different devices and screen sizes?
 
 ## Submission
-
-Please submit your assignment as a GitHub repository with clear instructions on how to run the application locally. Include a README file with any additional information necessary for evaluating your work. Ensure your repository is public and add meaningful comments in the code where necessary. Make small, incremental commits to track your progress.
 
 **Submitted the GitHub link to: [anubhav@weekday.team](mailto:anubhav@weekday.team)**.
