@@ -36,34 +36,3 @@
     transform: rotate(360deg);
   }
 }
-
-.job-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-
-.job-row {
-  display: flex;
-  flex-direction: column; 
-  gap: 20px; 
-}
-
-.job-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-}
-
-.job-card {
-  flex: 0 0 calc(33.33% - 20px); 
-}
-
-.app-header {
-  text-align: center;
-  margin-bottom: 20px; 
-}
-
-.job-list-container {
-  margin-top: 20px; 
-}

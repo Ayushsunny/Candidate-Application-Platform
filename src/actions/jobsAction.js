@@ -22,6 +22,7 @@ export const fetchJobs = (page) => async (dispatch) => {
 
     const response = await fetch('https://api.weekday.technology/adhoc/getSampleJdJSON', requestOptions);
     const data = await response.json();
+    console.log(data);
 
     if (data && data.jdList && Array.isArray(data.jdList)) {
       dispatch({

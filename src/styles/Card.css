@@ -1,22 +1,53 @@
-job-card {
-    border-radius: 12px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    height: 100%;
-    position: relative; /* Add position relative for absolute positioning */
-  }
-  
-  .view-more {
-    position: absolute;
-    bottom: 0.5rem;
-    left: 20.7rem;
-    background: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+  /* .view-more {
+    background: rgba(255, 255, 255, 0.8);
     border-radius: 5px;
     padding: 0.3rem 0.5rem;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); /* Add shadow effect */
-    transition: background 0.3s ease; /* Add transition effect */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); 
+    transition: background 0.3s ease;
   }
   
   .view-more:hover {
-    background: rgba(255, 255, 255, 1); /* Fully opaque white background on hover */
+    background: rgba(255, 255, 255, 1); 
+  } */
+  
+  .job-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 80px;
   }
   
+  .job-row {
+    display: flex;
+    flex-direction: column; 
+    gap: 20px; 
+  }
+  
+  .job-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  
+  .job-card {
+    flex: 0 0 calc(33.33% - 20px); 
+    border-radius: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+
+  }
+  
+  .app-header {
+    text-align: center;
+    margin-bottom: 20px; 
+  }
+  
+  .job-list-container {
+    margin-top: 30px; 
+    margin-left: 15px;
+
+  }
+  
+  .job-details{
+    position:'relative';
+  }
+
+ 
